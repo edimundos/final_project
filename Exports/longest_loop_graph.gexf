@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-12-07">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="distanceLY" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Betelgeuse" label="Betelgeuse" />
+      <node id="Sirius" label="Sirius" />
+      <node id="Mars" label="Mars" />
+    </nodes>
+    <edges>
+      <edge source="Betelgeuse" target="Sirius" id="0">
+        <attvalues>
+          <attvalue for="0" value="634.0" />
+        </attvalues>
+      </edge>
+      <edge source="Betelgeuse" target="Mars" id="1">
+        <attvalues>
+          <attvalue for="0" value="642.5" />
+        </attvalues>
+      </edge>
+      <edge source="Sirius" target="Mars" id="2">
+        <attvalues>
+          <attvalue for="0" value="8.6" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
