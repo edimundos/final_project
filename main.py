@@ -1,5 +1,6 @@
 import csv
-from graphing import SpaceGraph
+from space_graph import SpaceGraph
+from graph_coloring import GraphColoring
 
 def main():
 
@@ -24,11 +25,18 @@ def main():
     # Display the graph
     space_graph.display_graph()
 
-    # Example: Get neighbors of 'Earth'
-    neighbors = space_graph.get_neighbors('Earth')
-    print("\nNeighbors of Earth:")
-    for neighbor in neighbors:
-        print(neighbor)
+    # Create the GraphColoring object
+    graph_coloring = GraphColoring(space_graph)
+
+    # Find the minimum colors required
+    min_colors, solution = graph_coloring.find_min_colors()
+
+    # Print the result
+    print(f"Minimum number of colors required: {min_colors}")
+    print("Coloring solution:")
+    for node, color in solution.items():
+        print(f"{node}: Color {color}")
+
 
 if __name__ == "__main__":
     main()
