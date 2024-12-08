@@ -1,3 +1,6 @@
+import csv
+import os
+
 class SpaceGraph:
     def __init__(self, data_dict):
         """
@@ -37,3 +40,32 @@ class SpaceGraph:
                 print(f"  -> {edge['destination']} (distance: {edge['distanceLY']} LY, hyperflow: {edge['hyperflowSpiceMegaTons']} MT)")
 
 
+def readFile(fileName):
+    """
+    Reads a CSV file and constructs a dictionary representing the space graph.
+    Handles scientific notation and invalid data gracefully.
+    """
+    data_dict = {}  # Build dictionary in the format {(source, dest): {'distanceLY': ..., 'hyperflowSpiceMegaTons': ...}}
+
+    with open(fileName, mode='r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            try:
+                source = row['source']
+                destination = row['destination']
+                # Ensure distanceLY is parsed as a float
+                distanceLY = float(row['distanceLY'])
+                # Ensure hyperflowSpiceMegaTons is parsed as an integer
+                hyperflowSpiceMegaTons = int(row['hyperflowSpiceMegaTons'])
+                
+                # Add the data to the dictionary
+                data_dict[(source, destination)] = {
+                    'distanceLY': distanceLY,
+                    'hyperflowSpiceMegaTons': hyperflowSpiceMegaTons
+                }
+            except KeyError as e:
+                print(f"Missing column in data: {e}")
+            except ValueError as e:
+                print(f"Invalid data format in row: {row} - {e}")
+    
+    return data_dict
