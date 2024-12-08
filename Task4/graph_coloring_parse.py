@@ -1,6 +1,7 @@
 from Task4.graph_coloring import GraphColoring
 import os
 import networkx as nx
+import matplotlib.pyplot as plt
 
 def map_colors():
     """
@@ -62,3 +63,5 @@ def findColoring(space_graph, doPrint=False, export=False):
         path = os.path.join("Exports", gexf_filename)
         nx.write_gexf(nx_graph, path)
         print(f"Colored graph exported to {path}")
+
+        plt.savefig("Exports/colored_space_graph.png")

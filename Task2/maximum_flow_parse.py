@@ -1,4 +1,4 @@
-from maximum_flow_graph import MF_graph
+from Task2.maximum_flow_graph import MF_graph
 
 def mf_dfs(graph, current_node, target_node, path_flow, flow_graph, visited=None):
     if visited is None:
@@ -59,5 +59,3 @@ def read_graph(graph):
 def print_mf():
     graph = read_graph("canadian_cities.txt")
     print(ford_fulkerson(graph, "Argentia", "Inuvik"))
-
-main()

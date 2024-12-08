@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2024-12-07">
+  <meta lastmodifieddate="2024-12-08">
     <creator>NetworkX 3.4.2</creator>
   </meta>
   <graph defaultedgetype="undirected" mode="static" name="">
@@ -128,19 +128,19 @@
           <attvalue for="1" value="2537000.0" />
         </attvalues>
       </edge>
-      <edge source="Mars" target="Sirius" id="11">
-        <attvalues>
-          <attvalue for="1" value="8.6" />
-        </attvalues>
-      </edge>
-      <edge source="Mars" target="AlphaCentauri" id="12">
+      <edge source="Mars" target="AlphaCentauri" id="11">
         <attvalues>
           <attvalue for="1" value="4.24" />
         </attvalues>
       </edge>
-      <edge source="Mars" target="Betelgeuse" id="13">
+      <edge source="Mars" target="Betelgeuse" id="12">
         <attvalues>
           <attvalue for="1" value="642.5" />
+        </attvalues>
+      </edge>
+      <edge source="Mars" target="Sirius" id="13">
+        <attvalues>
+          <attvalue for="1" value="8.6" />
         </attvalues>
       </edge>
       <edge source="Mars" target="Europa" id="14">

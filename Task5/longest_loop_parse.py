@@ -1,6 +1,7 @@
 from Task5.longest_loop import LongestLoopDetector
 import os
 import networkx as nx
+import matplotlib.pyplot as plt
 
 def findLongestPath(space_graph, doPrint=False, export=False):
     # Create the LongestLoopDetector
@@ -34,3 +35,7 @@ def findLongestPath(space_graph, doPrint=False, export=False):
         path = os.path.join("Exports", gexf_filename)
         nx.write_gexf(nx_graph, path)
         print(f"Longest loop graph exported to {path}")
+
+        nx.draw(nx_graph, with_labels=True)
+        
+        plt.savefig("Exports/longest_loop_graph.png")
