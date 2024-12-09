@@ -95,7 +95,7 @@ The graph coloring algorithm determines the minimum number of colors required to
 - **Backtracking**: Checks each possible coloring configuration recursively and ensures that no two adjacent nodes have the same color.
 
 **Complexity:**
-- **Time Complexity**: \( O(V \cdot \log(V) \cdot \text{max\_colors}) \), where \( V \) is the number of nodes. The binary search narrows the range of colors, while the backtracking algorithm validates configurations.
+- **Time Complexity**: \( O(V * log(V) * max\_colors) \), where \( V \) is the number of nodes. The binary search narrows the range of colors, while the backtracking algorithm validates configurations.
 - **Space Complexity**: \( O(V) \), for storing colors and the recursion stack.
 
 #### **Output Analysis**
@@ -114,7 +114,7 @@ This algorithm identifies the longest cycle (loop) in an undirected graph, compu
 - **Cycle Detection**: Uses a path-tracking mechanism to detect cycles and calculate their weights.
 
 **Complexity:**
-- **Time Complexity**: \( O(V \cdot (V + E)) \), where \( V \) is the number of nodes and \( E \) is the number of edges. Each node and edge is explored multiple times to identify all possible cycles.
+- **Time Complexity**: \( O(V * (V + E)) \), where \( V \) is the number of nodes and \( E \) is the number of edges. Each node and edge is explored multiple times to identify all possible cycles.
 - **Space Complexity**: \( O(V + E) \), for storing the recursion stack, adjacency list, and the longest path.
 
 #### **Output Analysis**
