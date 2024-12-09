@@ -12,12 +12,12 @@ def main():
     develop_mst(data_dict)
 
     # Create a graph object
-    space_graph = build_undirected_graph_regular(data_dict)
+    space_graph_undirected = build_undirected_graph_regular(data_dict)
 
 
-    findColoring(space_graph, doPrint=False, export=True)
+    findColoring(space_graph_undirected, doPrint=False, export=True)
 
-    findLongestPath(space_graph, doPrint=False, export=True)
+    findLongestPath(space_graph_undirected, doPrint=False, export=True)
 
 
 

@@ -19,32 +19,10 @@ class GraphColoring:
         
         :param space_graph: Instance of SpaceGraph with adjacency list representation.
         """
-        self.graph = space_graph.graph
-
-        # Collect all nodes and ensure the graph is undirected.
-        all_nodes = set(self.graph.keys())
-        for src, edges in list(self.graph.items()):
-            for edge in edges:
-                dest = edge['destination']
-                all_nodes.add(dest)
-
-                # Add reverse edge if missing.
-                if dest not in self.graph:
-                    self.graph[dest] = []
-                if not any(e['destination'] == src for e in self.graph[dest]):
-                    self.graph[dest].append({
-                        'destination': src,
-                        'distanceLY': edge['distanceLY'],
-                        'hyperflowSpiceMegaTons': edge['hyperflowSpiceMegaTons']
-                    })
-
-        # Ensure all nodes, including isolated ones, are represented in the graph.
-        for n in all_nodes:
-            if n not in self.graph:
-                self.graph[n] = []
-
+        
+        self.graph = space_graph.graph  # Adjacency list representation of the graph.
         self.colors = {}  # Dictionary to store assigned colors for nodes.
-        self.nodes = list(all_nodes)  # List of all nodes in the graph.
+        self.nodes = list(self.graph.keys())  # List of nodes in the graph.
 
     def is_safe(self, node, color):
         """
