@@ -8,12 +8,18 @@ import os
 
 def main():
     data_dict = readFile("actual_distances_space_graph.csv")
-    print(data_dict)
+    # print(data_dict)
+
+    # mst_graph = develop_mst(data_dict)
+    #print_mst(mst_graph)
+    #write_mst(mst_graph)
+    
+
     # Create a graph object
     space_graph = SpaceGraph(data_dict)
 
     # Display the graph
-    # space_graph.display_graph()
+    space_graph.display_graph()
 
     findColoring(space_graph, doPrint=True, export=True)
 
