@@ -27,7 +27,7 @@ def main():
     print(flow)
     print(flow_graph)
 
-    findColoring(space_graph, doPrint=True, export=True)
+    findColoring(space_graph, doPrint=False, export=True)
 
     findLongestPath(space_graph, doPrint=False, export=True)
 
