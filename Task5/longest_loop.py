@@ -1,4 +1,4 @@
-# Algorithm inspiration: Depth-First Search (DFS) for cycle detection with path tracking.
+# Depth-First Search (DFS) for cycle detection with path tracking.
 # This algorithm finds the longest loop (cycle) in an undirected graph by recursively exploring paths.
 
 # Total Complexity:
