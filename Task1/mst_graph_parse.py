@@ -1,8 +1,10 @@
 import random
 import heapq
 import os
-from Graphs.utils import build_undirected_graph
+from Graphs.utils import build_undirected_graph_hyperflow
 from Graphs.space_graph import Space_graph
+import os
+import networkx as nx
 
 
 def prims_MST(current_graph):
@@ -47,14 +49,21 @@ def prims_MST(current_graph):
             if neighbor not in visited:
                 heapq.heappush(priority_queue, (cost, to_node, neighbor))
 
+    print("MST")
+    print(mst_graph)
     return mst_graph
 
 
 
-def develop_mst(graph):
-    undirected_graph = build_undirected_graph(graph)
+
+def develop_mst(graph, doPrint=True, export=False ):
+    undirected_graph = build_undirected_graph_hyperflow(graph)
     mst_graph =prims_MST(undirected_graph)
-    return mst_graph
+    # print(mst_graph)
+    # if doPrint:
+    #     print_mst(mst_graph)
+    # if export:
+    #     write_mst(mst_graph)
 
 
 def print_mst(mst_graph):
@@ -67,11 +76,27 @@ def print_mst(mst_graph):
 #TODO save in GEFX
 def write_mst(mst_graph):
 
+    nx_graph = nx.Graph()
+
+    for node, edges in mst_graph.adjacency_list:
+        nx_graph.add_node(node, label=node)  # Add node labels
+        for edge in edges:
+            nx_graph.add_edge(
+                node,
+                edge['destination'],
+                weight=edge['distanceLY']  # Assign distance as edge attribute
+            )
     filename ="mst_graph.txt"
     os.makedirs("Exports", exist_ok=True)
     path = os.path.join("Exports", filename)
     with open(path, "w") as file:
         file.write(mst_graph.__str__())
+    # Save the GEXF file
+    gexf_filename = "longest_loop_graph.gexf"
+    os.makedirs("Exports", exist_ok=True)
+    path = os.path.join("Exports", gexf_filename)
+    nx.write_gexf(nx_graph, path)
+    print(f"Longest loop graph exported to {path}")
 
 
     

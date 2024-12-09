@@ -16,7 +16,8 @@ def build_directed_graph(data_dict):
     return graph
 
 
-def build_undirected_graph(data_dict):
+
+def build_undirected_graph_hyperflow(data_dict):
     """
     Takes in graph dictionary and transforms it into undirected graph for MST graph development
     """
@@ -42,6 +43,28 @@ def build_undirected_graph(data_dict):
             undirected_mst_graph.add_edge(to_node, from_node, maxHyperFlow, distance)
     
     return undirected_mst_graph
+
+
+def build_undirected_graph_regular(data_dict):
+    """
+    Takes in graph dictionary and transforms it into undirected graph for MST graph development
+    """
+
+    undirected_reg_graph=Space_graph()
+
+    for key in data_dict:
+        from_node =key[0]
+        to_node=key[1]
+
+        #For Task 4 and 5 distance is not important so we just take the first that we access
+        hyperflow= data_dict[key]["hyperflowSpiceMegaTons"]
+        distance =data_dict[key]["distanceLY"]
+
+        undirected_reg_graph.add_edge(from_node, to_node, hyperflow, distance)
+        undirected_reg_graph.add_edge(to_node, from_node, hyperflow, distance)
+
+    return undirected_reg_graph
+
 
 def readFile(fileName):
     """

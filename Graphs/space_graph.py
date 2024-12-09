@@ -28,9 +28,12 @@ class Space_graph:
         return self.graph.get(node, [])
     
     def __str__(self):
-        str =""
+        graph_representation = []
         for node, edges in self.graph.items():
-            str +=(f"{node}:\n")
+            graph_representation.append(f"{node}:")
             for edge in edges:
-                str += (f"  -> {edge['destination']} (distance: {edge['distanceLY']} LY, hyperflow: {edge['hyperflowSpiceMegaTons']} MT)\n")
-        return str
+                graph_representation.append(
+                    f"  -> {edge['destination']} (distance: {edge['distanceLY']} LY, hyperflow: {edge['hyperflowSpiceMegaTons']} MT)"
+                )
+        return "\n".join(graph_representation)
+   

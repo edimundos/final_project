@@ -1,31 +1,19 @@
-from Graphs.utils import build_directed_graph, readFile
+
+from Graphs.space_graph import Space_graph
+from Graphs.utils import readFile, build_undirected_graph_regular
 from Task4.graph_coloring_parse import findColoring
 from Task5.longest_loop_parse import findLongestPath
 from Task1.mst_graph_parse import develop_mst, print_mst, write_mst
-from Task2.maximum_flow_parse import ford_fulkerson_max_flow
-from Task3.cosmic_diameter import shortest_longest_path
+# from Task2.maximum_flow_parse import print_mf
 
 
 def main():
     data_dict = readFile("actual_distances_space_graph.csv")
-    # print(data_dict)
+    develop_mst(data_dict)
 
     # Create a graph object
-    space_graph = build_directed_graph(data_dict)
+    space_graph = build_undirected_graph_regular(data_dict)
 
-    mst_graph =develop_mst(data_dict)
-    print_mst(mst_graph)
-    write_mst(mst_graph)
-    
-
-    # Display the graph
-    print(space_graph)
-
-    print(shortest_longest_path(space_graph))
-
-    flow_graph, flow = ford_fulkerson_max_flow(space_graph,"Earth", "Betelgeuse")
-    print(flow)
-    print(flow_graph)
 
     findColoring(space_graph, doPrint=False, export=True)
 

@@ -1,5 +1,3 @@
-from Task2.maximum_flow_graph import MF_graph
-
 def mf_dfs(graph, current_node, target_node, path_flow, flow_graph, visited=None):
     if visited is None:
         visited = set()
