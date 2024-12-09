@@ -3,7 +3,7 @@ import os
 import networkx as nx
 
 def findLongestPath(space_graph, doPrint=False, export=False):
-    # Create the LongestLoopDetector
+ 
     detector = LongestLoopDetector(space_graph.graph)
 
     # Find the longest loop
@@ -25,7 +25,7 @@ def findLongestPath(space_graph, doPrint=False, export=False):
                 nx_graph.add_edge(
                     node,
                     edge['destination'],
-                    distanceLY=edge['distanceLY']  # Assign distance as edge attribute
+                    weight=edge['distanceLY']  # Assign distance as edge attribute
                 )
 
         # Save the GEXF file

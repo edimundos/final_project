@@ -1,3 +1,10 @@
+# Algorithm inspiration: Depth-First Search (DFS) for cycle detection with path tracking.
+# This algorithm finds the longest loop (cycle) in an undirected graph by recursively exploring paths.
+
+# Total Complexity:
+# Time Complexity: O(V * (V + E)), where V is the number of nodes, and E is the number of edges.
+# Space Complexity: O(V + E), for recursion stack, adjacency list, and path storage.
+
 class LongestLoopDetector:
     def __init__(self, graph):
         """
