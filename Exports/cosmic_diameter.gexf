@@ -5,14 +5,17 @@
   </meta>
   <graph defaultedgetype="undirected" mode="static" name="">
     <nodes>
+      <node id="Betelgeuse" label="Betelgeuse" />
+      <node id="Sirius" label="Sirius" />
       <node id="Earth" label="Earth" />
       <node id="Arcturus" label="Arcturus" />
       <node id="Andromeda" label="Andromeda" />
     </nodes>
     <edges>
-      <edge source="Earth" target="Arcturus" id="0" weight="36.66" />
-      <edge source="Earth" target="Andromeda" id="1" weight="2537000.0" />
-      <edge source="Arcturus" target="Andromeda" id="2" weight="2536963.34" />
+      <edge source="Betelgeuse" target="Sirius" id="0" />
+      <edge source="Sirius" target="Earth" id="1" />
+      <edge source="Earth" target="Arcturus" id="2" />
+      <edge source="Arcturus" target="Andromeda" id="3" />
     </edges>
   </graph>
 </gexf>

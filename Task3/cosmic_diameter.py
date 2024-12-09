@@ -1,4 +1,7 @@
 import heapq
+from Graphs.utils import build_directed_graph
+import os
+import networkx as nx
 
 def dijkstra(start_node, space_graph):
 
@@ -34,10 +37,15 @@ def reconstruct_path( parents, end_node):
         path.reverse()
         return path
 
-def shortest_longest_path(space_graph):
+def longest_shortest_path(data_dict, doPrint=True, export=True):
+        #initilizes space graph
+        space_graph = build_directed_graph(data_dict)
         max_distance = -float('inf')  # Start with the smallest possible value
         for start_node in space_graph.graph.keys():
+
+            # Get all distances to all parents
             distances, parents = dijkstra(start_node, space_graph)
+            
             for end_node in space_graph.graph.keys():
                 if start_node != end_node and distances[end_node] != float('inf'):
                     # Check if this is the longest shortest path found so far
@@ -51,4 +59,39 @@ def shortest_longest_path(space_graph):
                             'distance': distances[end_node]
                         }
 
-        return longest_path
+        if doPrint:
+             print_path(longest_path)
+        
+        if export:
+             write_path(longest_path["path"])
+
+def print_path(path):
+    print("===============================================================")
+    print(f"Path distance length: {round(path['distance'], 2)}")
+
+    print(path)
+    print("===============================================================")
+
+def write_path(path):
+
+    nx_graph = nx.Graph()
+    previous=None
+
+    for node in path:
+        nx_graph.add_node(node, label=node)  # Add node labels
+        if previous==None:
+             previous=node
+             continue
+        
+        nx_graph.add_edge(
+            node,
+            previous,
+        )
+        previous=node
+
+    # Save the GEXF file
+    gexf_filename = "cosmic_diameter.gexf"
+    os.makedirs("Exports", exist_ok=True)
+    path = os.path.join("Exports", gexf_filename)
+    nx.write_gexf(nx_graph, path)
+    print(f"Cosmic diameter exported to {path}")

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-12-10">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Earth" label="Earth" />
+      <node id="Mars" label="Mars" />
+      <node id="Betelgeuse" label="Betelgeuse" />
+      <node id="Sirius" label="Sirius" />
+      <node id="Ganymede" label="Ganymede" />
+      <node id="Europa" label="Europa" />
+      <node id="AlphaCentauri" label="AlphaCentauri" />
+      <node id="ProximaCentauri" label="ProximaCentauri" />
+      <node id="Vega" label="Vega" />
+      <node id="Polaris" label="Polaris" />
+      <node id="Arcturus" label="Arcturus" />
+      <node id="Andromeda" label="Andromeda" />
+    </nodes>
+    <edges>
+      <edge source="Earth" target="Mars" id="0" weight="131" />
+      <edge source="Earth" target="Betelgeuse" id="1" weight="252" />
+      <edge source="Earth" target="Sirius" id="2" weight="341" />
+      <edge source="Mars" target="Betelgeuse" id="3" weight="138" />
+      <edge source="Sirius" target="Mars" id="4" weight="7" />
+      <edge source="Sirius" target="Betelgeuse" id="5" weight="334" />
+    </edges>
+  </graph>
+</gexf>

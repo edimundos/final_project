@@ -72,18 +72,24 @@ This structure ensures clarity, modularity, and reusability by separating tasks,
 
 ## **Tasks Overview**
 
-### **Task 1: Placeholder**
-- AAAAAAAAAAAAAAAAAAAAAAAA
+### **Task 1: Qunatum Maximum Flow**
+- Creates Minimum spanning tree, by converting the given graph to undirected graph. It uses
+- **Prims algorithm**: uses dijkstra/greedy type algorithm to loop through the nodes and edges to add to MST
+- **Undirected graph development**: If edge exists both ways, take minimum of hyperflow, add edge both ways to undirected graph.
+- Time complexity O(ElogE) - E - edges
 
 ### **Task 2: Maximum Flow**
-- Calculates the maximum flow between nodes in the space graph.
-- Includes:
-  - **Core Algorithm**: `maximum_flow_graph.py`
-  - **Results Parsing and Exporting**: `maximum_flow_parse.py`
+- Uses Ford Fulkerson to get the Maximum Hyperflow - 724. It uses
+- **Ford Fulkerson**: Assumes that every edge has capacity 0, uses dfs to loop until all the paths are found
+- **Depth first search**: For every single neighbouring node, calculate residual capacity, If neighbour has not been visited and capacity is above 0, take minimum flow, recursively call dfs to get the result
+- Time complexity: O(V*E^2) v- vertices, e - edges
 
 ### **Task 3: Cosmic Diameter**
-- Computes the largest shortest path between any two nodes in the space graph (cosmic diameter).
-- Implementation: `cosmic_diameter.py`
+- Calculates the longest shortest path by running dijkstra on all nodes and checking their path length. Diameter - 2537642.6. It uses:
+- **Vertice loops**: For every vertice, get shortest paths using dijkstra, for every path check if it is the longest
+- **Dijkstra**
+- Time complexity dense graphs: O(V^3logV) 
+- Time complexity sparse graphs: O(V^2logV) 
 
 ---
 
