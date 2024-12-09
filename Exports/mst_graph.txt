@@ -1,11 +1,18 @@
-Europa:
-  -> Earth (distance: 1.6e-05 LY, hyperflow: 300 MT)
+
+Mars:
+  -> Sirius (distance: 8.6 LY, hyperflow: 62 MT)
+Sirius:
+  -> Mars (distance: 8.6 LY, hyperflow: 62 MT)
+  -> Betelgeuse (distance: 634.0 LY, hyperflow: 207 MT)
+  -> Earth (distance: 8.6 LY, hyperflow: 322 MT)
+Betelgeuse:
+  -> Sirius (distance: 634.0 LY, hyperflow: 207 MT)
 Earth:
-  -> Europa (distance: 1.6e-05 LY, hyperflow: 300 MT)
+  -> Sirius (distance: 8.6 LY, hyperflow: 322 MT)
   -> Arcturus (distance: 36.66 LY, hyperflow: 78 MT)
   -> Vega (distance: 25.05 LY, hyperflow: 154 MT)
   -> AlphaCentauri (distance: 4.24 LY, hyperflow: 163 MT)
-  -> Sirius (distance: 8.6 LY, hyperflow: 322 MT)
+  -> Europa (distance: 1.6e-05 LY, hyperflow: 300 MT)
 Arcturus:
   -> Earth (distance: 36.66 LY, hyperflow: 78 MT)
   -> Andromeda (distance: 2536963.34 LY, hyperflow: 337 MT)
@@ -17,6 +24,8 @@ AlphaCentauri:
   -> ProximaCentauri (distance: 0.00022 LY, hyperflow: 172 MT)
 ProximaCentauri:
   -> AlphaCentauri (distance: 0.00022 LY, hyperflow: 172 MT)
+Europa:
+  -> Earth (distance: 1.6e-05 LY, hyperflow: 300 MT)
 Sirius:
   -> Earth (distance: 8.6 LY, hyperflow: 322 MT)
   -> Mars (distance: 8.6 LY, hyperflow: 62 MT)
