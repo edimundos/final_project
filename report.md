@@ -9,17 +9,12 @@ This repository contains the implementation of a series of graph-based tasks for
 final_project/
 │
 ├── Exports/                       # Output directory for exported results
-│   ├── colored_nodes.graphml      # GraphML file with colored nodes for Gephi visualization
-│   ├── colored_space_graph.png    # PNG of the colored space graph
-│   ├── longest_loop_graph.gexf    # GEXF file of the longest loop for Gephi
-│   ├── longest_loop_graph.png     # PNG of the longest loop graph visualization
-│   ├── mst_graph.txt              # Text representation of the MST graph
 │
 ├── Graphs/                        # Utility functions and graph structure
-│   ├── space_graph.py             # Class for creating and managing graph structures
-│   ├── utils.py                   # Helper functions for graph operations
+│   ├── space_graph.py             # Class for creating and managing the graph structure
+│   ├── utils.py                   # Helper functions for graph operations, file input
 │
-├── Task1/                         # Placeholder for Task 1 (future expansion)
+├── Task1/                         # Placeholder for Task 1
 │
 ├── Task2/                         # Maximum Flow Graph Analysis
 │   ├── maximum_flow_graph.py      # Core algorithm for maximum flow computation
@@ -51,9 +46,11 @@ final_project/
 
 ## **How to Run**
 
+This structure ensures clarity, modularity, and reusability by separating tasks, centralizing shared utilities, and organizing outputs, making the project scalable and easy to manage.
+
 1. **Clone the Repository**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/edimundos/final_project.git
    cd final_project
    ```
 
@@ -76,7 +73,7 @@ final_project/
 ## **Tasks Overview**
 
 ### **Task 1: Placeholder**
-- This folder is reserved for future project extensions.
+- AAAAAAAAAAAAAAAAAAAAAAAA
 
 ### **Task 2: Maximum Flow**
 - Calculates the maximum flow between nodes in the space graph.
@@ -88,17 +85,43 @@ final_project/
 - Computes the largest shortest path between any two nodes in the space graph (cosmic diameter).
 - Implementation: `cosmic_diameter.py`
 
+---
+
 ### **Task 4: Graph Coloring**
-- Assigns colors to nodes such that no two adjacent nodes share the same color, minimizing the number of colors.
-- Includes:
-  - **Core Algorithm**: `graph_coloring.py`
-  - **Results Parsing and Exporting**: `graph_coloring_parse.py`
+
+#### **Algorithm Analysis**
+The graph coloring algorithm determines the minimum number of colors required to color a graph such that no two adjacent nodes share the same color. It uses:
+- **Binary Search Optimization**: The algorithm efficiently narrows the search space for the minimum number of colors.
+- **Backtracking**: Checks each possible coloring configuration recursively and ensures that no two adjacent nodes have the same color.
+
+**Complexity:**
+- **Time Complexity**: \( O(V \cdot \log(V) \cdot \text{max\_colors}) \), where \( V \) is the number of nodes. The binary search narrows the range of colors, while the backtracking algorithm validates configurations.
+- **Space Complexity**: \( O(V) \), for storing colors and the recursion stack.
+
+#### **Output Analysis**
+- **Output**: The minimum amount of colors needed for this exercise specifically is 4, with only 1 planet being colored in the color 4 (Earth) and 1 planet in color 3 (Mars). This result makes sense, because both of these planet nodes many have children some of which are also connected, as well as Earth and Mars are interconnected. 
+
+- **Visualization**: The solution is exported as a **GraphML** file instead of a **GEXF** file as it support coloring for nodes:
+  - **Node Attributes**: Each node has a unique color represented by a hex code.
+
+---
 
 ### **Task 5: Longest Loop**
-- Detects the longest cycle (loop) in the graph and computes its total weight.
-- Includes:
-  - **Core Algorithm**: `longest_loop.py`
-  - **Results Parsing and Exporting**: `longest_loop_parse.py`
+
+#### **Algorithm Analysis**
+This algorithm identifies the longest cycle (loop) in an undirected graph, computing the total weight of the cycle:
+- **Depth-First Search (DFS)**: Traverses the graph recursively, keeping track of visited nodes, paths, and weights.
+- **Cycle Detection**: Uses a path-tracking mechanism to detect cycles and calculate their weights.
+
+**Complexity:**
+- **Time Complexity**: \( O(V \cdot (V + E)) \), where \( V \) is the number of nodes and \( E \) is the number of edges. Each node and edge is explored multiple times to identify all possible cycles.
+- **Space Complexity**: \( O(V + E) \), for storing the recursion stack, adjacency list, and the longest path.
+
+#### **Output Analysis**
+- **Output**: The longest cycle in this case is Earth - Arcturus - Andromeda, which could have also been found by manual search since the distance to Andromeda is over 2.5 million.
+- **Visualization**: The solution is exported as a **GEXF** file:
+  - **Node Attributes**: Nodes involved in the longest cycle.
+  - **Edge Attributes**: Includes distances as weights. **Remark**: since the distance to Andromeda is so large, it is very hard to see with distances to scale
 
 ---
 
@@ -106,7 +129,6 @@ final_project/
 The `Exports` folder contains all outputs for visualization and analysis, such as:
 - **GraphML and GEXF Files**: For importing into Gephi or other visualization tools.
 - **PNGs**: Pre-rendered visualizations of graphs.
-- **Text Files**: Simplified representations of graph structures.
 
 ---
 
@@ -127,8 +149,3 @@ The project uses the following Python libraries:
 - Additional utilities listed in `requirements.txt`.
 
 ---
-
-## **Future Improvements**
-- Extend Task 1 for additional graph analysis.
-- Add dynamic graph visualizations.
-- Optimize algorithms for larger datasets.
