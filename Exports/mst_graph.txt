@@ -1,3 +1,4 @@
+
 Mars:
   -> Sirius (distance: 8.6 LY, hyperflow: 62 MT)
 Sirius:
@@ -25,6 +26,14 @@ ProximaCentauri:
   -> AlphaCentauri (distance: 0.00022 LY, hyperflow: 172 MT)
 Europa:
   -> Earth (distance: 1.6e-05 LY, hyperflow: 300 MT)
+Sirius:
+  -> Earth (distance: 8.6 LY, hyperflow: 322 MT)
+  -> Mars (distance: 8.6 LY, hyperflow: 62 MT)
+  -> Betelgeuse (distance: 634.0 LY, hyperflow: 207 MT)
+Mars:
+  -> Sirius (distance: 8.6 LY, hyperflow: 62 MT)
+Betelgeuse:
+  -> Sirius (distance: 634.0 LY, hyperflow: 207 MT)
 Polaris:
   -> Vega (distance: 298.57 LY, hyperflow: 324 MT)
 Andromeda:

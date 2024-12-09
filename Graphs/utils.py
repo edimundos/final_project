@@ -16,6 +16,7 @@ def build_directed_graph(data_dict):
     return graph
 
 
+
 def build_undirected_graph_hyperflow(data_dict):
     """
     Takes in graph dictionary and transforms it into undirected graph for MST graph development
@@ -43,6 +44,7 @@ def build_undirected_graph_hyperflow(data_dict):
     
     return undirected_mst_graph
 
+
 def build_undirected_graph_regular(data_dict):
     """
     Takes in graph dictionary and transforms it into undirected graph for MST graph development
@@ -62,6 +64,7 @@ def build_undirected_graph_regular(data_dict):
         undirected_reg_graph.add_edge(to_node, from_node, hyperflow, distance)
 
     return undirected_reg_graph
+
 
 def readFile(fileName):
     """

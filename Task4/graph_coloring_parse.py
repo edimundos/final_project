@@ -1,6 +1,7 @@
 from Task4.graph_coloring import GraphColoring
 import os
 import networkx as nx
+import matplotlib.pyplot as plt
 
 
 def map_colors():

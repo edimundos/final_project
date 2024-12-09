@@ -1,3 +1,4 @@
+
 from Graphs.space_graph import Space_graph
 from Graphs.utils import readFile, build_undirected_graph_regular
 from Task4.graph_coloring_parse import findColoring
@@ -8,7 +9,6 @@ from Task1.mst_graph_parse import develop_mst, print_mst, write_mst
 
 def main():
     data_dict = readFile("actual_distances_space_graph.csv")
-
     develop_mst(data_dict)
 
     # Create a graph object

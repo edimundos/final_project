@@ -36,4 +36,4 @@ class Space_graph:
                     f"  -> {edge['destination']} (distance: {edge['distanceLY']} LY, hyperflow: {edge['hyperflowSpiceMegaTons']} MT)"
                 )
         return "\n".join(graph_representation)
-    
+   
