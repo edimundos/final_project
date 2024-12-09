@@ -62,3 +62,27 @@ def findColoring(space_graph, doPrint=False, export=False):
         path = os.path.join("Exports", gexf_filename)
         nx.write_gexf(nx_graph, path)
         print(f"Colored graph exported to {path}")
+
+def scale_edge_weights(space_graph, scale_range=(1, 10)):
+    """
+    Scales edge weights proportionally for visualization purposes.
+
+    Parameters:
+        space_graph (SpaceGraph): The graph object with adjacency list representation.
+        scale_range (tuple): Range to scale edge weights, default is (1, 10).
+
+    Returns:
+        dict: A dictionary of scaled weights with (source, destination) as keys.
+    """
+    min_scale, max_scale = scale_range
+    all_distances = [
+        edge['distanceLY'] for edges in space_graph.graph.values() for edge in edges
+    ]
+
+    min_distance = min(all_distances)
+    max_distance = max(all_distances)
+
+    scaled_weights = {}
+    for src, edges in space_graph.graph.items():
+        for edge in edges:
+            dest = edge['destination']
