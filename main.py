@@ -20,7 +20,7 @@ def main():
     ford_fulkerson_max_flow(space_graph_directed, "Earth", "Betelgeuse", doPrint=True, export=True)
 
     #Task 3
-    longest_shortest_path(space_graph_directed, doPrint=True, export=True)
+    longest_shortest_path(space_graph_undirected, doPrint=True, export=True)
 
     #Task 4
     findColoring(space_graph_undirected, doPrint=False, export=True)
