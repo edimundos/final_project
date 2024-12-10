@@ -14,13 +14,13 @@ def main():
     space_graph_undirected = build_undirected_graph_regular(data_dict)
 
     #Task 1
-    develop_mst(data_dict, True, True)
+    develop_mst(data_dict, doPrint=False, export=True)
 
     #Task 2
-    ford_fulkerson_max_flow(space_graph_directed, "Earth", "Betelgeuse")
+    ford_fulkerson_max_flow(space_graph_directed, "Earth", "Betelgeuse", doPrint=False, export=True)
 
     #Task 3
-    longest_shortest_path(space_graph_directed)
+    longest_shortest_path(space_graph_directed, doPrint=False, export=True)
 
     #Task 4
     findColoring(space_graph_undirected, doPrint=False, export=True)
