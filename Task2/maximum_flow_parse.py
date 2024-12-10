@@ -34,9 +34,7 @@ def mf_dfs(graph, current_node, target_node, path_flow, flow_graph, visited=None
                 return result
     return 0
 
-def ford_fulkerson_max_flow(data_dict, source, sink, doPrint=True, export=True):
-    #initilize space graph
-    space_graph = build_directed_graph(data_dict)
+def ford_fulkerson_max_flow(space_graph, source, sink, doPrint=True, export=True):
 
     #initilize flow graph and set the capacity of edges to zero
     flow_graph = {node: {} for node in space_graph.graph}

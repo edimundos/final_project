@@ -37,9 +37,8 @@ def reconstruct_path( parents, end_node):
         path.reverse()
         return path
 
-def longest_shortest_path(data_dict, doPrint=True, export=True):
-        #initilizes space graph
-        space_graph = build_directed_graph(data_dict)
+def longest_shortest_path(space_graph, doPrint=True, export=True):
+
         max_distance = -float('inf')  # Start with the smallest possible value
         for start_node in space_graph.graph.keys():
 
