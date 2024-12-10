@@ -5,29 +5,29 @@
   </meta>
   <graph defaultedgetype="undirected" mode="static" name="">
     <nodes>
-      <node id="Andromeda" label="Andromeda" />
-      <node id="Arcturus" label="Arcturus" />
+      <node id="Sirius" label="Sirius" />
+      <node id="Mars" label="Mars" />
+      <node id="Betelgeuse" label="Betelgeuse" />
       <node id="Earth" label="Earth" />
+      <node id="Arcturus" label="Arcturus" />
       <node id="Vega" label="Vega" />
       <node id="AlphaCentauri" label="AlphaCentauri" />
       <node id="Europa" label="Europa" />
-      <node id="Sirius" label="Sirius" />
+      <node id="Andromeda" label="Andromeda" />
       <node id="Polaris" label="Polaris" />
       <node id="ProximaCentauri" label="ProximaCentauri" />
-      <node id="Mars" label="Mars" />
-      <node id="Betelgeuse" label="Betelgeuse" />
     </nodes>
     <edges>
-      <edge source="Andromeda" target="Arcturus" id="0" />
-      <edge source="Arcturus" target="Earth" id="1" />
-      <edge source="Earth" target="Vega" id="2" />
-      <edge source="Earth" target="AlphaCentauri" id="3" />
-      <edge source="Earth" target="Europa" id="4" />
-      <edge source="Earth" target="Sirius" id="5" />
-      <edge source="Vega" target="Polaris" id="6" />
-      <edge source="AlphaCentauri" target="ProximaCentauri" id="7" />
-      <edge source="Sirius" target="Mars" id="8" />
-      <edge source="Sirius" target="Betelgeuse" id="9" />
+      <edge source="Sirius" target="Mars" id="0" />
+      <edge source="Sirius" target="Betelgeuse" id="1" />
+      <edge source="Sirius" target="Earth" id="2" />
+      <edge source="Earth" target="Arcturus" id="3" />
+      <edge source="Earth" target="Vega" id="4" />
+      <edge source="Earth" target="AlphaCentauri" id="5" />
+      <edge source="Earth" target="Europa" id="6" />
+      <edge source="Arcturus" target="Andromeda" id="7" />
+      <edge source="Vega" target="Polaris" id="8" />
+      <edge source="AlphaCentauri" target="ProximaCentauri" id="9" />
     </edges>
   </graph>
 </gexf>

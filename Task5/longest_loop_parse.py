@@ -1,7 +1,6 @@
 from Task5.longest_loop import LongestLoopDetector
 import os
 import networkx as nx
-import matplotlib.pyplot as plt
 
 def findLongestPath(space_graph, doPrint=False, export=False):
  
@@ -10,12 +9,22 @@ def findLongestPath(space_graph, doPrint=False, export=False):
     # Find the longest loop
     max_weight, longest_loop_graph = detector.find_longest_loop()
 
+    total_loop_length = 0
+    visited_edges = set()  # To avoid counting the same edge twice
+
+    for node, edges in longest_loop_graph.items():
+        for edge in edges:
+            # Use a tuple (source, destination) to identify unique edges
+            edge_key = tuple(sorted([node, edge['destination']]))
+            if edge_key not in visited_edges:
+                total_loop_length += edge['distanceLY']
+                visited_edges.add(edge_key)
+
     if doPrint:
-        print(f"Sum of distances in the longest loop: {max_weight}")
+        print(f"Total loop length (edge sum): {total_loop_length}")
         print("Longest loop as a graph:")
         for node, edges in longest_loop_graph.items():
             print(f"{node}: {edges}")
-
     if export:
         # Export the longest loop graph to GEXF
         nx_graph = nx.Graph()
@@ -38,4 +47,3 @@ def findLongestPath(space_graph, doPrint=False, export=False):
 
         nx.draw(nx_graph, with_labels=True)
         
-        plt.savefig("Exports/longest_loop_graph.png")
