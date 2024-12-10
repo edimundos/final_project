@@ -72,7 +72,7 @@ def write_flow_graph(flow_graph):
     # Create a directed graph
     nx_graph = nx.DiGraph()
 
-    # Add nodes and edges with weights
+    # Add nodes and edges
     for node, edges in flow_graph.items():
         nx_graph.add_node(node, label=node)  # Add node labels
         for key, weight in edges.items():

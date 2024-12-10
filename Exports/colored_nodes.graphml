@@ -1,75 +1,72 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d1" for="node" attr.name="color" attr.type="string" />
-  <key id="d0" for="node" attr.name="label" attr.type="string" />
-  <graph edgedefault="undirected">
-    <node id="Earth">
-      <data key="d0">Earth</data>
-      <data key="d1">#FF0000</data>
-    </node>
-    <node id="Mars">
-      <data key="d0">Mars</data>
-      <data key="d1">#00FF00</data>
-    </node>
-    <node id="Ganymede">
-      <data key="d0">Ganymede</data>
-      <data key="d1">#00FF00</data>
-    </node>
-    <node id="Europa">
-      <data key="d0">Europa</data>
-      <data key="d1">#0000FF</data>
-    </node>
-    <node id="AlphaCentauri">
-      <data key="d0">AlphaCentauri</data>
-      <data key="d1">#0000FF</data>
-    </node>
-    <node id="Betelgeuse">
-      <data key="d0">Betelgeuse</data>
-      <data key="d1">#0000FF</data>
-    </node>
-    <node id="Sirius">
-      <data key="d0">Sirius</data>
-      <data key="d1">#FFFF00</data>
-    </node>
-    <node id="ProximaCentauri">
-      <data key="d0">ProximaCentauri</data>
-      <data key="d1">#00FF00</data>
-    </node>
-    <node id="Vega">
-      <data key="d0">Vega</data>
-      <data key="d1">#00FF00</data>
-    </node>
-    <node id="Polaris">
-      <data key="d0">Polaris</data>
-      <data key="d1">#0000FF</data>
-    </node>
-    <node id="Arcturus">
-      <data key="d0">Arcturus</data>
-      <data key="d1">#00FF00</data>
-    </node>
-    <node id="Andromeda">
-      <data key="d0">Andromeda</data>
-      <data key="d1">#0000FF</data>
-    </node>
-    <edge source="Earth" target="Mars" />
-    <edge source="Earth" target="Ganymede" />
-    <edge source="Earth" target="Europa" />
-    <edge source="Earth" target="AlphaCentauri" />
-    <edge source="Earth" target="Betelgeuse" />
-    <edge source="Earth" target="Sirius" />
-    <edge source="Earth" target="ProximaCentauri" />
-    <edge source="Earth" target="Vega" />
-    <edge source="Earth" target="Polaris" />
-    <edge source="Earth" target="Arcturus" />
-    <edge source="Earth" target="Andromeda" />
-    <edge source="Mars" target="AlphaCentauri" />
-    <edge source="Mars" target="Betelgeuse" />
-    <edge source="Mars" target="Sirius" />
-    <edge source="Mars" target="Europa" />
-    <edge source="Ganymede" target="Europa" />
-    <edge source="AlphaCentauri" target="ProximaCentauri" />
-    <edge source="Betelgeuse" target="Sirius" />
-    <edge source="Vega" target="Polaris" />
-    <edge source="Arcturus" target="Andromeda" />
-  </graph>
-</graphml>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="color" attr.type="string"/>
+<key id="d0" for="node" attr.name="label" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Earth">
+  <data key="d0">Earth</data>
+  <data key="d1">#FF0000</data>
+</node>
+<node id="Mars">
+  <data key="d0">Mars</data>
+  <data key="d1">#00FF00</data>
+</node>
+<node id="Ganymede">
+  <data key="d0">Ganymede</data>
+  <data key="d1">#00FF00</data>
+</node>
+<node id="Europa">
+  <data key="d0">Europa</data>
+  <data key="d1">#0000FF</data>
+</node>
+<node id="AlphaCentauri">
+  <data key="d0">AlphaCentauri</data>
+  <data key="d1">#0000FF</data>
+</node>
+<node id="Betelgeuse">
+  <data key="d0">Betelgeuse</data>
+  <data key="d1">#0000FF</data>
+</node>
+<node id="Sirius">
+  <data key="d0">Sirius</data>
+  <data key="d1">#FFFF00</data>
+</node>
+<node id="ProximaCentauri">
+  <data key="d0">ProximaCentauri</data>
+  <data key="d1">#00FF00</data>
+</node>
+<node id="Vega">
+  <data key="d0">Vega</data>
+  <data key="d1">#00FF00</data>
+</node>
+<node id="Polaris">
+  <data key="d0">Polaris</data>
+  <data key="d1">#0000FF</data>
+</node>
+<node id="Arcturus">
+  <data key="d0">Arcturus</data>
+  <data key="d1">#00FF00</data>
+</node>
+<node id="Andromeda">
+  <data key="d0">Andromeda</data>
+  <data key="d1">#0000FF</data>
+</node>
+<edge source="Earth" target="Mars"/>
+<edge source="Earth" target="Ganymede"/>
+<edge source="Earth" target="Europa"/>
+<edge source="Earth" target="AlphaCentauri"/>
+<edge source="Earth" target="Betelgeuse"/>
+<edge source="Earth" target="Sirius"/>
+<edge source="Earth" target="ProximaCentauri"/>
+<edge source="Earth" target="Vega"/>
+<edge source="Earth" target="Polaris"/>
+<edge source="Earth" target="Arcturus"/>
+<edge source="Earth" target="Andromeda"/>
+<edge source="Mars" target="AlphaCentauri"/>
+<edge source="Mars" target="Betelgeuse"/>
+<edge source="Mars" target="Sirius"/>
+<edge source="Mars" target="Europa"/>
+<edge source="Ganymede" target="Europa"/>
+<edge source="AlphaCentauri" target="ProximaCentauri"/>
+<edge source="Betelgeuse" target="Sirius"/>
+<edge source="Vega" target="Polaris"/>
+<edge source="Arcturus" target="Andromeda"/>
+</graph></graphml>

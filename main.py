@@ -17,16 +17,16 @@ def main():
     develop_mst(data_dict, doPrint=False, export=True)
 
     #Task 2
-    ford_fulkerson_max_flow(space_graph_directed, "Earth", "Betelgeuse", doPrint=False, export=True)
+    ford_fulkerson_max_flow(space_graph_directed, "Earth", "Betelgeuse", doPrint=True, export=True)
 
     #Task 3
-    longest_shortest_path(space_graph_directed, doPrint=False, export=True)
+    longest_shortest_path(space_graph_directed, doPrint=True, export=True)
 
     #Task 4
     findColoring(space_graph_undirected, doPrint=False, export=True)
 
     #Task 5
-    findLongestPath(space_graph_undirected, doPrint=False, export=True)
+    findLongestPath(space_graph_undirected, doPrint=True, export=True)
 
 
 

@@ -78,8 +78,7 @@ def write_mst(mst_graph):
         for edge in edges:
             nx_graph.add_edge(
                 node,
-                edge['destination'],
-                weight=edge['hyperflowSpiceMegaTons']  # Assign distance as edge attribute
+                edge['destination']
             )
 
     # Save the GEXF file
